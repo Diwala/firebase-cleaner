@@ -4,7 +4,7 @@ const moment = require('moment');
 
 
 const firebase = admin.initializeApp({
-  credential: admin.credential.cert(CONFIG.FIREBASE.SERVICE_ACCOUNT),
+  credential: admin.credential.cert(CONFIG.FIREBASE.ADMIN),
   databaseURL: CONFIG.FIREBASE.DATABASE_URL
 });
 
@@ -12,7 +12,7 @@ const ref = firebase.database().ref('/')
 const nowMinus1HourInUnix = parseInt(moment().subtract(1,'hour').unix())
 console.log(`Checking if any snapshots are up to this time`);
 console.log(`Unix: ${nowMinus1HourInUnix}`);
-console.log(`Formated: ${moment(nowMinus1HourInUnix).format('MMMM Do YYYY, h:mm:ss a')}`);
+console.log(`Formated: ${moment.unix(nowMinus1HourInUnix).format('MMMM Do YYYY, h:mm:ss a')}`);
 
 
 ref

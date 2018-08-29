@@ -3,17 +3,20 @@
   "version": "0.0.1",
   "description": "A cleaning script for cleaning up after a specific time",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "firebase"
   ],
   "author": "Snorre Lothar von Gohren Edwin snorre@diwala.io",
   "license": "ISC",
   "dependencies": {
+    "@diwala/configurator": "^0.1.0",
     "firebase": "^5.4.1",
     "firebase-admin": "^6.0.0",
     "moment": "^2.22.2"
+  },
+  "scripts": {
+    "_config":"configurator setup -r Diwala/config-cert-platform -f firebase-cleaner ",
+    "config-prod": "yarn _config -e prod ",
+    "config-dev": "yarn _config -e dev "
   }
 }
