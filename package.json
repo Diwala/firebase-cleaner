@@ -1,0 +1,19 @@
+{
+  "name": "firebase-cleaner",
+  "version": "0.0.1",
+  "description": "A cleaning script for cleaning up after a specific time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "firebase"
+  ],
+  "author": "Snorre Lothar von Gohren Edwin snorre@diwala.io",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^5.4.1",
+    "firebase-admin": "^6.0.0",
+    "moment": "^2.22.2"
+  }
+}
